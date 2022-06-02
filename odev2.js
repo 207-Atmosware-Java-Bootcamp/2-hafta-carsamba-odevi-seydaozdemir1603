@@ -11,7 +11,7 @@
 //S-9) Kullanıcıdan alınan başka bir kelimeyle birinci olan kelimeyle yer değiştirmek ?
 
 
-var word = String(prompt("Bir kelime giriniz: ") + "<br>");
+var word =prompt("Bir kelime giriniz: ");
 
 document.write(word+"<br>");
 document.write("kaç karakterlidir: " +word.length + "<br>");
@@ -23,7 +23,7 @@ document.write("girdiğiniz kelime java ile başlıyor mu?: " + word.startsWith(
 document.write("girdiğiniz kelimenin sonuna -ben js öğreniyorum- koymak: " + word.concat(" -ben java öğreniyorum.") + "<br>");
 document.write("girdiğiniz kelimenin 0 ile 4 arasındaki index: " + word.substring(0,4) + "<br>");
 
-var newWord = String(prompt("İkinci bir kelime giriniz: ") + " <br>");
-
+var newWord = prompt("İkinci bir kelime giriniz: ") + "<br>";
+var firstWord = word.substring(0,word.indexOf(' '));
 document.write("ikinci kelime: " + newWord);
-document.write("kullanıcıdan alınan başka bir kelimeyle birinci olan kelimenin yer değişimi sonucu: " + word.substring(0).replace(word, newWord) + "<br>"); 
+document.write("kullanıcıdan alınan başka bir kelimeyle birinci olan kelimenin yer değişimi sonucu: " + word.replace(firstWord, newWord) + "<br>"); 
